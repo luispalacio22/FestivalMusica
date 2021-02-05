@@ -6,14 +6,14 @@ const webp = require('gulp-webp');
 const concat = require('gulp-concat');
 
 // Utilidades CSS
-//const autoprefixer = require('autoprefixer');
-//const postcss = require('gulp-postcss');
-//const cssnano = require('cssnano');
-//const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Utilidades JS
-//const terser = require('gulp-terser-js');
-//const rename = require('gulp-rename');
+const terser = require('gulp-terser-js');
+const rename = require('gulp-rename');
 
 const paths = {
     imagenes: 'src/img/**/*',
@@ -23,20 +23,20 @@ const paths = {
 
 function css() {
     return src(paths.scss)
-        //.pipe( sourcemaps.init() )
+        .pipe( sourcemaps.init() )
         .pipe( sass())
-        //.pipe( postcss([ autoprefixer(), cssnano() ]))
-        //.pipe( sourcemaps.write('.') )
+        .pipe( postcss([ autoprefixer(), cssnano() ]))
+        .pipe( sourcemaps.write('.') )
         .pipe( dest('./build/css') )
 }
 
 function javascript() {
     return src(paths.js)
-        //.pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe( concat('bundle.js') )
-        //.pipe( terser() )
-        //.pipe(sourcemaps.write('.'))
-        //.pipe( rename({ suffix: '.min' }))
+        .pipe( terser() )
+        .pipe(sourcemaps.write('.'))
+        .pipe( rename({ suffix: '.min' }))
         .pipe( dest('./build/js') )
 }
 

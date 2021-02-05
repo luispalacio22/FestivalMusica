@@ -10,13 +10,13 @@
         <link rel="stylesheet" href="build/css/app.css">
     </head>
     <body>
-        <header class="header">
+        <header class="header fijo">
             <div class="contenedor contenido-header">
                 <h1>Rock & EDM Festival</h1>
                 <nav class="navegacion-principal">
-                    <a href="#">Line up</a>
-                    <a href="#">Galeria</a>
-                    <a href="#">Boletos</a>
+                    <a href="#lineup">Line up</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#boletos">Boletos</a>
                 </nav>
             </div>
         </header>
@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <section class="lineup">
+        <section id="lineup" class="lineup">
             <h3>Line Up</h3>
 
             <p class="dia">Viernes 21</p>
@@ -108,14 +108,14 @@
             </div>
         </section>
 
-        <section class="galeria contenedor">
+        <section id="galeria" class="galeria contenedor">
             <h3>Galeria</h3>
 
             <ul class="galeria-imagenes"></ul>
 
         </section>
       
-        <section class="boletos bg-verde">
+        <section id="boletos" class="boletos bg-verde">
             <h3>Boletos</h3>
 
             <div class="contenido-boletos contenedor">
@@ -185,8 +185,7 @@
             <p>Rock & Festival. Todos los derechos reservados 2021</p>
         </footer>
         
-        <script src="build/js/bundle.js" ></script>
-        <script src="build/js/app.js" ></script>
+        <script src="build/js/bundle.min.js" ></script>
 
         
     </body>
