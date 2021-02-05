@@ -1,0 +1,52 @@
+.boletos{
+    padding: 5rem 0;
+    h3{
+        text-align: center;
+        color: $blanco;
+    }
+    .contenido-boletos{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5rem;
+    }
+}
+.plan{
+    p{
+        color: $blanco;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+.pase{
+    width: 100%;
+    border-spacing: 0;
+    thead{
+        background-color: $rosa;
+        th{
+            padding: 1.3rem;
+            color: $blanco;
+            text-transform: uppercase;
+            font-weight: $delgada;
+            font-size: 2rem;
+        }
+    }
+    tbody{
+        background-color: $blanco;
+        td{
+            text-align: center;
+            padding: 1.3rem;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+    }
+    tfoot{
+        background-color: $morado;
+        td{
+            padding: 1.3rem;
+            color: $blanco;
+            text-align: center;
+        }
+    }
+}
